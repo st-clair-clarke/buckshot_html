@@ -1,0 +1,28 @@
+<stack>
+  <textblock style='{resource headerText}' text="List From Data Source:"/>
+
+  <dropdownlist name="ddlFruit" itemssource="{data fruit}"></dropdownlist>
+
+  <stack orientation="horizontal">
+    <textblock style='{resource defaultText}' valign='center' text="Current Choice:" />
+    <border margin='0,0,0,5' padding='4' borderColor='Black' borderthickness='2' background='Khaki'>
+       <textblock style='{resource defaultText}' text="{element ddlFruit.selectedItem.item}"/>
+    </border>
+  </stack>
+
+  <textblock style='{resource headerText}' text="List From Template:"/>
+
+  <dropdownlist name="ddlColors">
+    <items>
+      <DropDownItem item="Red" value="Red" />
+      <DropDownItem item="Blue" value="Blue" />
+      <DropDownItem item="Green" value="Green" />
+      <DropDownItem item="Orange" value="Orange" />
+      <DropDownItem item="Tan" value="Tan" />
+    </items>
+  </dropdownlist>
+
+  <!-- Element binding is used here to set the border's background color -->
+  <border margin="5,0,0,0" width="75" height="75" background="{element ddlColors.selectedItem.item}"></border>
+
+</stack>
