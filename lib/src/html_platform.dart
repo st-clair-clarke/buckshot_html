@@ -1,6 +1,5 @@
 part of buckshot_html_browser;
 
-
 /**
  * Html box model presentation provider.
  */
