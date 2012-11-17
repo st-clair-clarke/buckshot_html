@@ -78,18 +78,18 @@ each list.
   <textblock style="{resource title}">Horizontal ListBox</textblock>
 
   <stack orientation="horizontal">
-    <listbox name="lbHorizontal" datacontext="{data icons}" width="300" verticalScrollEnabled="false" horizontalScrollEnabled="true">
+    <listbox name="lbHorizontal" datacontext="{data icons}" width="300" hscroll="visible" vscroll="hidden">
       <presentationpanel>
-        <stack orientation="horizontal"></stack>
+        <stack valign='stretch' orientation="horizontal"></stack>
       </presentationpanel>
       <itemstemplate>
-        <border style="{resource rows}" width="150">
-          <stack>
-            <border width="150" height="64">
-              <image halign="center" valign="center" uri="{data uri}"></image>
+        <border style="{resource rows}" width="150" valign='stretch'>
+          <stack halign='stretch'>
+            <border halign='stretch' height='65'>
+              <image valign='center' halign="center" uri="{data uri}"></image>
             </border>
-            <textblock foreground="Black" fontfamily="arial" text="{data name}"/>
-            <textblock foreground="Black" fontsize="12" text="{data description}"/>
+            <textblock halign='stretch' foreground="Black" fontfamily="arial" text="{data name}"/>
+            <textblock halign='stretch' foreground="Black" fontsize="12" text="{data description}"/>
           </stack>
         </border>
       </itemstemplate>

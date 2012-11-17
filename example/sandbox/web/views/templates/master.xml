@@ -31,6 +31,7 @@
 		       </hyperlink>
 	       <textblock margin='0,0,0,5' valign='center' foreground='White' text='Buckshot Sandbox' />
 	       <textblock margin='0,0,0,5' valign='center' foreground='White' fontsize='10' text='alpha' />
+	       <image cursor='Help' margin='0,0,0,3' on.click='click_help_handler' width='20' uri='web/resources/help.png' alot='Help Icon' />
 	    </stack>
   </border>
 
@@ -135,6 +136,7 @@
   		shadowcolor='Gray' shadowx='2' shadowy='2' shadowblur='3'
   		dockpanel.dock='top'
   		background='{resource theme_light_brush}'
+  		padding='5'
   		margin="5" minheight='200' maxheight='600'
     	borderThickness="1" borderColor="{resource theme_border_color}">
     	<scrollviewer halign='stretch' valign='stretch' hscroll='hidden' vscroll='auto'>
@@ -147,7 +149,7 @@
        <button on.click='clearAll_handler' content="Clear All"></button>
     </stack>
 
-    <textarea fontsize='18' dockpanel.dock='bottom' minwidth='650' minheight='300' margin='0,10,0,5'
+    <textarea fontsize='14' dockpanel.dock='bottom' minwidth='650' minheight='300' margin='0,10,0,5'
 	    placeholder="Type something here or select one of the samples to the left."
 	    spellcheck="false"
 	  	text='{data templateText, mode=twoway}' />

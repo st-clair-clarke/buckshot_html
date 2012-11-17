@@ -123,7 +123,7 @@ class MasterViewModel extends ViewModelBase
         'demoTreeNodeSelected', defaultValue: '');
 
     dockText = new FrameworkProperty(this, 'dockText',
-        defaultValue: 'Docked left.');
+        defaultValue: 'Docked top.');
 
     secondInDegrees = new FrameworkProperty(this, 'secondInDegs',
         defaultValue: 0);
@@ -263,8 +263,25 @@ class MasterViewModel extends ViewModelBase
     registerEventHandler('dockpanel_click', dockpanel_click);
     registerEventHandler('selection_handler', selection_handler);
     registerEventHandler('debug_click', debug_click);
+    registerEventHandler('click_help_handler', click_help_handler);
   }
 
+
+  /**
+   * Handles click events coming from the 'help' icon.
+   */
+  void click_help_handler(sender, args){
+    var header = new View.fromResource('web/views/templates/about_header.xml');
+    var body = new View.fromResource('web/views/templates/about_body.xml');
+
+    Futures
+      .wait([header.ready, body.ready])
+      .then((results){
+        final md = new ModalDialog
+          .with(results[0], results[1], ModalDialog.Ok);
+        md.show();
+      });
+  }
 
   void debug_click(sender, args){
     new Logger('buckshot.example.sandbox')

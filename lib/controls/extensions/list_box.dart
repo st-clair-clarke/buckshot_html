@@ -123,7 +123,12 @@ class ListBox extends Control implements FrameworkContainer
   /// the ListBox.
   void onItemMouseEnter(item){
     if (item.hasProperty("background")){
-      item.stateBag["__lb_item_bg_brush__"] = item.background.value;
+      if (item.background.value == null){
+        item.stateBag["__lb_item_bg_brush__"] =
+            new SolidColorBrush.fromPredefined(Colors.White);
+      }else{
+        item.stateBag["__lb_item_bg_brush__"] = item.background.value;
+      }
       item.background.value = highlightBrush.value;
     }
   }
