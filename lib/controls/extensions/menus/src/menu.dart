@@ -141,10 +141,10 @@ class Menu extends Control implements FrameworkContainer
             minheight='20'
             borderthickness='{resource theme_border_thickness}'
             bordercolor='{resource theme_border_color}'
-            cursor='Arrow'>
+            hittest='none'>
       <collectionpresenter halign='stretch' items='{template menuItems}'>
          <itemstemplate>
-           <border padding='{resource theme_menu_padding}' background='{resource theme_dark_brush}' halign='stretch'>
+           <border hittest='all' cursor='Arrow' padding='{resource theme_menu_padding}' background='{resource theme_dark_brush}' halign='stretch'>
               <actions>
                 <setproperty event='mouseEnter' property='background' value='{resource theme_menu_background_hover_brush}' />
                 <setproperty event='mouseLeave' property='background' value='{resource theme_menu_background_brush}' />

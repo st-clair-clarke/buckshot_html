@@ -1,4 +1,4 @@
-<border style='{resource calcStyle}'>
+<border hittest='none' style='{resource calcStyle}'>
 	<grid width='{data width}' height='400'>
 		<rowdefinitions>
 			<rowdefinition height='50' />
@@ -16,7 +16,7 @@
 		</Stack>
 		<Stack orientation='horizontal' valign='center' halign='right' margin='0,5,0,0'>
 			<textblock style='{resource defaultText}' text='Mode:' margin='0,0,0,5' />
-			<dropdownlist on.selectionChanged='selectionChanged_handler'>
+			<dropdownlist hittest='all' on.selectionChanged='selectionChanged_handler'>
 				<items>
 					<dropdownitem item='Standard' value='Standard' />
 					<dropdownitem item='Extended' value='Extended' />

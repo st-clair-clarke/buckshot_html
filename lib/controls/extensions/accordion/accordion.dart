@@ -117,7 +117,7 @@ class Accordion extends Control implements FrameworkContainer
 <controltemplate controlType='${this.templateName}'>
   <template>
     <border background='{template background}' cursor='Arrow'>
-      <collectionpresenter halign='stretch' name='__ac_presenter__' items='{template accordionItems}'>
+      <collectionpresenter hittest='none' halign='stretch' name='__ac_presenter__' items='{template accordionItems}'>
          <presentationpanel>
             <stack halign='stretch' />
          </presentationpanel>
@@ -145,7 +145,8 @@ class Accordion extends Control implements FrameworkContainer
          borderthickness='{resource theme_accordion_header_border_thickness}' 
          bordercolor='{resource theme_border_color}' 
          background='{resource theme_accordion_header_background_brush}' 
-         halign='stretch'>
+         halign='stretch'
+         hittest='all'>
     <actions>
       <setproperty event='mouseEnter' 
                    property='background' 
@@ -172,8 +173,9 @@ class Accordion extends Control implements FrameworkContainer
 '''
  <border name='__accordion_body__' 
          halign='stretch' 
-         background='{resource theme_accordion_body_background_brush}'>
-   <contentpresenter halign='stretch' content='{data body}' />
+         background='{resource theme_accordion_body_background_brush}'
+         hittest='none'>
+   <contentpresenter hittest='all' halign='stretch' content='{data body}' />
  </border>
 ''';
 

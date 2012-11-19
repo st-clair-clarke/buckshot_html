@@ -159,7 +159,7 @@ class TabControl extends Control implements FrameworkContainer
 '''
 <controltemplate controlType='${this.templateName}'>
   <template>
-     <grid valign='{template vAlign}' halign='{template hAlign}' height='{template height}' width='{template width}'>
+     <grid hittest='none' valign='{template vAlign}' halign='{template hAlign}' height='{template height}' width='{template width}'>
         <rowdefinitions>
            <rowdefinition height='auto' />
            <rowdefinition height='*' />
@@ -169,12 +169,12 @@ class TabControl extends Control implements FrameworkContainer
               <stack orientation='horizontal' />
            </presentationpanel>
            <itemstemplate>
-              <border name='tab_border' valign='stretch' cursor='Arrow' background='{resource theme_dark_brush}' margin='0,1,0,0' borderthickness='1,1,0,1' bordercolor='{resource theme_border_color}' padding='2'>
+              <border hittest='all' name='tab_border' valign='stretch' cursor='Arrow' background='{resource theme_dark_brush}' margin='0,1,0,0' borderthickness='1,1,0,1' bordercolor='{resource theme_border_color}' padding='2'>
                  <stack orientation='horizontal'>
-                    <contentpresenter content='{data icon}' margin='0,2,0,0' />
-                    <contentpresenter content='{data header}' margin='0,3,0,0' />
-                    <border margin='0,2,0,3' valign='top' width='13' height='13' padding='0,0,2,0'>
-                      <border name='__close_button__' borderColor='{resource theme_border_color}' borderthickness='{resource theme_border_thickness}' halign='stretch' valign='stretch' visibility='{data closeButtonVisibility}'>
+                    <contentpresenter hittest='none' content='{data icon}' margin='0,2,0,0' />
+                    <contentpresenter hittest='none' content='{data header}' margin='0,3,0,0' />
+                    <border hittest='none' margin='0,2,0,3' valign='top' width='13' height='13' padding='0,0,2,0'>
+                      <border hittest='all' name='__close_button__' borderColor='{resource theme_border_color}' borderthickness='{resource theme_border_thickness}' halign='stretch' valign='stretch' visibility='{data closeButtonVisibility}'>
                           <actions>
                              <setproperty event='mouseEnter' property='background' value='Orange' />
                              <setproperty event='mouseLeave' property='background' value='White' />
@@ -196,7 +196,8 @@ class TabControl extends Control implements FrameworkContainer
                 bordercolor='{resource theme_border_color}' 
                 borderthickness='{resource theme_border_thickness}' 
                 background='{template background}' 
-                padding='{resource theme_border_padding}' />
+                padding='{resource theme_border_padding}'
+                hittest='all' />
      </grid>
   </template>
 </controltemplate>

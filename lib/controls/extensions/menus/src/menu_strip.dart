@@ -108,10 +108,10 @@ class MenuStrip extends Control implements FrameworkContainer
     return '''
 <controltemplate controlType='${this.templateName}'>
   <template>
-    <border cursor='Arrow' background='{resource theme_menu_background_brush}'>
+    <border background='{resource theme_menu_background_brush}'>
       <collectionpresenter name='__menu_strip_cp__' halign='stretch' items='{template menus}'>
          <presentationpanel>
-            <stack orientation='{template orientation}'></stack>
+            <stack cursor='Arrow' orientation='{template orientation}'></stack>
          </presentationpanel>
          <itemstemplate>
            <stack>

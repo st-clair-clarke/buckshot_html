@@ -181,6 +181,10 @@ abstract class Control
   /*
    * SurfaceElement Overrides
    */
+  @override void onHitTestVisibilityChanged(HitTestVisibility value){
+    rawElement.style.pointerEvents = '$value';
+  }
+
   @override void onUserSelectChanged(bool value){
       rawElement.style.userSelect = value ? 'all' : 'none';
   }

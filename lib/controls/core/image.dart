@@ -30,6 +30,10 @@ class Image extends SurfaceImage implements HtmlPlatformElement
   /*
    * SurfaceElement Overrides
    */
+  @override void onHitTestVisibilityChanged(HitTestVisibility value){
+    rawElement.style.pointerEvents = '$value';
+  }
+
   @override void onUserSelectChanged(bool value){
       rawElement.style.userSelect = value ? 'all' : 'none';
   }

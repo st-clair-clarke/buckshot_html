@@ -172,10 +172,10 @@ class TreeNode extends Control implements FrameworkContainer
     return
     '''<controltemplate controlType="${this.templateName}">
           <template>
-            <stack>
+            <stack hittest='none'>
               <stack orientation='horizontal'>
-                <contentpresenter name='__tree_node_indicator__' margin='2' minwidth='15' content='{template indicator}' />
-                <border style='{template _mouseEventStyles}' padding='0,5,0,0' borderThickness='1' cornerRadius='4' name='__tree_node_header__'>
+                <contentpresenter hittest='all' name='__tree_node_indicator__' margin='2' minwidth='15' content='{template indicator}' />
+                <border hittest='all' style='{template _mouseEventStyles}' padding='0,5,0,0' borderThickness='1' cornerRadius='4' name='__tree_node_header__'>
                   <stack orientation='horizontal'>
                     <contentpresenter name='icon' valign='center' margin='2' minwidth='20' content='{template icon}' />
                     <contentpresenter name='header' valign='center' content='{template header}' />

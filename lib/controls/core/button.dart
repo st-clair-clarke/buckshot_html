@@ -45,12 +45,13 @@ class Button extends Control implements FrameworkContainer
             borderthickness='{resource theme_button_border_thickness}'
             bordercolor='{resource theme_button_border_color}'
             padding='{resource theme_border_padding}'
-            cursor='Arrow'>
+            cursor='Arrow'
+            hittest='all'>
         <actions>
           <setproperty event='mouseEnter' property='background' value='{resource theme_button_background_hover}' />
           <setproperty event='mouseLeave' property='background' value='{resource theme_button_background}' />
         </actions>
-        <contentpresenter halign='center' valign='center' content='{template content}' />
+        <contentpresenter hittest='none' halign='center' valign='center' content='{template content}' />
     </border>
   </template>
 </controltemplate>

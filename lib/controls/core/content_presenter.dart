@@ -11,6 +11,7 @@ class ContentPresenter
     rawElement.style.overflow = 'hidden';
     rawElement.style.display = '-webkit-flex';
     rawElement.style.boxSizing = 'border-box';
+    hitTest.value = HitTestVisibility.none;
   }
 
   @override makeMe() => new ContentPresenter();
@@ -53,13 +54,16 @@ class ContentPresenter
     if (newContent is String){
       new Logger('buckshot.pal.html.$this')
       ..fine('wrapping "$newContent" in TextBlock');
-      content.value = new TextBlock()..text.value = newContent;
+      content.value = new TextBlock()
+                            ..text.value = newContent
+                            ..hitTest.value = HitTestVisibility.all;
       updateLayout();
       return;
     }
 
     new Logger('buckshot.pal.html.$this')
     ..fine('setting content to "$newContent"');
+    newContent.hitTest.value = HitTestVisibility.all;
     rawElement.elements.add(newContent.rawElement);
     newContent.parent = this;
     updateLayout();
@@ -69,6 +73,10 @@ class ContentPresenter
   /*
    * SurfaceElement Overrides
    */
+  @override void onHitTestVisibilityChanged(HitTestVisibility value){
+    rawElement.style.pointerEvents = '$value';
+  }
+
   @override void onUserSelectChanged(bool value){
       rawElement.style.userSelect = value ? 'all' : 'none';
   }

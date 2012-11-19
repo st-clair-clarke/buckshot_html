@@ -70,6 +70,10 @@ class Border extends SurfaceBorder implements HtmlPlatformElement
     rawElement.style.borderColor = color.toColorString();
   }
 
+  @override void onHitTestVisibilityChanged(HitTestVisibility value){
+    rawElement.style.pointerEvents = '$value';
+  }
+
   @override void onUserSelectChanged(bool value){
       rawElement.style.userSelect = value ? 'all' : 'none';
   }

@@ -81,6 +81,9 @@ class Stack extends SurfaceStack implements HtmlPlatformElement
   /*
    * SurfaceStack Overrides
    */
+  @override void onHitTestVisibilityChanged(HitTestVisibility value){
+    rawElement.style.pointerEvents = '$value';
+  }
 
   @override void onOrientationChanged(Orientation value){
     rawElement.style.flexFlow =

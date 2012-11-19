@@ -66,11 +66,13 @@ class ListBox extends Control implements FrameworkContainer
                     background='{resource theme_light_brush}'
                     borderthickness='{resource theme_border_thickness}' 
                     name="__buckshot_listbox_border__"
-                    cursor="Arrow">
+                    cursor="Arrow"
+                    hittest='none'>
               <scrollviewer hscroll='{template hScroll}' 
                             vscroll='{template vScroll}'
                             halign='stretch'
-                            valign='stretch'>
+                            valign='stretch'
+                            hittest='all'>
                 <collectionPresenter halign='stretch' name='__buckshot_listbox_presenter__' />
               </scrollviewer>
             </border>

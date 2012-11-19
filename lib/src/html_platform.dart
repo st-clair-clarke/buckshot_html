@@ -39,7 +39,7 @@ class HtmlPlatform extends BoxModelSurface
     _startEventLoop();
   }
 
-  String get namespace => 'http://surface.buckshotui.org/html';
+  @override String get namespace => 'http://buckshotui.org/surface/html';
 
   /**
    * Helper function which takes an [element] and binds it's
@@ -58,6 +58,11 @@ class HtmlPlatform extends BoxModelSurface
     }
   }
 
+  /**
+   * Retrieves a buckshot template from the given [uri].  This function also
+   * supports a uri of '#name', which will query for the template in the HTML
+   * DOM.
+   */
   @override Future<String> getTemplate(String uri){
     var c = new Completer();
     final type = _determineType(uri);
