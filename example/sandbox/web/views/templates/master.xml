@@ -31,7 +31,7 @@
 		       </hyperlink>
 	       <textblock margin='0,0,0,5' valign='center' foreground='White' text='Buckshot Sandbox' />
 	       <textblock margin='0,0,0,5' valign='center' foreground='White' fontsize='10' text='alpha' />
-	       <image cursor='Help' margin='0,0,0,3' on.click='click_help_handler' width='20' uri='web/resources/help.png' alot='Help Icon' />
+	       <image cursor='Help' margin='0,0,0,3' on.click='click_help_handler' width='20' uri='web/resources/help.png' alt='Help Icon' />
 	    </stack>
   </border>
 

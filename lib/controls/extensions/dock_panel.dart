@@ -4,6 +4,8 @@
 
 library dockpanel_control_extensions_buckshot;
 import 'package:buckshot_html/buckshot_html_browser.dart';
+part 'src/dock_location.dart';
+part 'src/string_to_location.dart';
 
 /**
  * A panel element that supports docking of child elements within it.

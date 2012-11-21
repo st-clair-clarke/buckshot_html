@@ -28,7 +28,7 @@ class TreeView extends Control implements FrameworkContainer
 
   static const String FOLDER_DEFAULT_TEMPLATE =
       '''
-<layoutcanvas hitest='none' width='16' height='16'>
+<layoutcanvas hittest='none' width='16' height='16'>
   <border width='16' height='14' layoutcanvas.top='1' cornerradius='2' borderthickness='1' bordercolor='{resource theme_border_color_dark}' background='{resource theme_dark_brush}' />
   <border layoutcanvas.left='10' width='6' height='14' cornerradius='2' borderthickness='1' bordercolor='{resource theme_border_color_dark}' background='{resource theme_dark_brush}' />
   <border layoutcanvas.top='5' height='10' width='16' cornerradius='2' borderthickness='1' bordercolor='{resource theme_border_color_dark}' background='{resource theme_dark_brush}' />

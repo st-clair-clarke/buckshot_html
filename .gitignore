@@ -6,5 +6,6 @@
 *.lock
 *.tmp
 *.log
+*.js.deps
 packages
 debug
