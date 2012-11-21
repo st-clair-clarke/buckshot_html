@@ -314,9 +314,6 @@ class MasterViewModel extends ViewModelBase
     }on TemplateException catch(pe){
       error = "We were unable to parse your input into content for"
         " display: ${pe}";
-    }on FrameworkPropertyResolutionException catch(pre){
-      error = "A framework error occured while attempting to resolve"
-        " a property binding: ${pre}";
     }on BuckshotException catch(fe){
       error = "A framework error occured while attempting to render"
         " the content: ${fe}";
