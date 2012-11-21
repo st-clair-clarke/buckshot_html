@@ -67,7 +67,7 @@ abstract class Control
           XML.parse(defaultControlTemplate.rawData).attributes['controlType'];
       assert(tName != null);
       assert(!tName.isEmpty);
-      Template
+      Templates
         .deserialize(defaultControlTemplate.rawData)
         .then((_) => _finishApplyVisualTemplate(tName));
     } else if (defaultControlTemplate is String &&
@@ -75,7 +75,7 @@ abstract class Control
       final tName = XML.parse(defaultControlTemplate).attributes['controlType'];
       assert(tName != null);
       assert(!tName.isEmpty);
-      Template
+      Templates
         .deserialize(defaultControlTemplate)
         .then((_) => _finishApplyVisualTemplate(tName));
     }else{
@@ -255,7 +255,7 @@ abstract class Control
   }
 
   @override void onDraggableChanged(bool draggable){
-    throw new NotImplementedException('todo...');
+    throw new UnsupportedError('todo...');
   }
 
   void _unloadChildren(FrameworkContainer container){

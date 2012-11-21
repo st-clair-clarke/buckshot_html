@@ -3,7 +3,7 @@
 // See LICENSE file for Apache 2.0 licensing information.
 
 library sandbox_buckshot;
-import 'package:dartnet_event_model/events.dart';
+import 'package:dartnet_event_model/dartnet_event_model.dart';
 import 'package:buckshot_html/controls/extensions/all_html_controls.dart';
 import 'apps/todo/todo.dart' as todo;
 import 'viewmodels/calculator_viewmodel.dart';

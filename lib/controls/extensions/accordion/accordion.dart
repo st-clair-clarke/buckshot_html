@@ -59,7 +59,7 @@ class Accordion extends Control implements FrameworkContainer
   void _invalidate(){
     if (accordionItems.value.isEmpty) return;
 
-    Stack pc = (Template.findByName('__ac_presenter__', template)
+    Stack pc = (Templates.findByName('__ac_presenter__', template)
         as CollectionPresenter)
         .presentationPanel
         .value;
@@ -69,8 +69,8 @@ class Accordion extends Control implements FrameworkContainer
     pc.children.forEach((e){
       final ai = accordionItems.value[i++];
 
-      final header = Template.findByName('__accordion_header__', e);
-      final body = Template.findByName('__accordion_body__', e);
+      final header = Templates.findByName('__accordion_header__', e);
+      final body = Templates.findByName('__accordion_body__', e);
 
       assert(header != null && body != null);
 

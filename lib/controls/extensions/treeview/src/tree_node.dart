@@ -31,7 +31,7 @@ class TreeNode extends Control implements FrameworkContainer
 
   void onFirstLoad(){
     super.onFirstLoad();
-    _parentTreeView = Template.findParentByType(this, 'TreeView') as TreeView;
+    _parentTreeView = Templates.findParentByType(this, 'TreeView') as TreeView;
     assert(_parentTreeView != null);
     new Logger('buckshot.pal.html.$this')
       ..fine('Finding parent tree view');
@@ -68,7 +68,7 @@ class TreeNode extends Control implements FrameworkContainer
     new Logger('buckshot.pal.html.$this')
       ..fine('Initializing control.');
     // Toggle visibility of child nodes when clicked.
-    (Template
+    (Templates
       .findByName('__tree_node_indicator__', template) as ContentPresenter)
       .click + (_, __){
         new Logger('buckshot.pal.html.$this')
@@ -79,7 +79,7 @@ class TreeNode extends Control implements FrameworkContainer
         updateIndicator();
       };
 
-    final rowElement = Template.findByName('__tree_node_header__', template);
+    final rowElement = Templates.findByName('__tree_node_header__', template);
     assert(rowElement is Border);
 
     rowElement.mouseEnter + (_, __){
@@ -129,8 +129,8 @@ class TreeNode extends Control implements FrameworkContainer
     Futures
       .wait(
       [
-       Template.deserialize(TreeView.FOLDER_DEFAULT_TEMPLATE),
-       Template.deserialize(TreeView.FILE_DEFAULT_TEMPLATE)
+       Templates.deserialize(TreeView.FOLDER_DEFAULT_TEMPLATE),
+       Templates.deserialize(TreeView.FILE_DEFAULT_TEMPLATE)
        ]
       ).then((results){
         folderIcon.value = results[0];

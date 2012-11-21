@@ -176,13 +176,13 @@ class MasterViewModel extends ViewModelBase
       if (text.startsWith('<')){
         templateText.value = text;
 
-        Template
+        Templates
           .deserialize(text)
           .then((c){
             renderedOutput.value = c;
           });
       }else{
-        Template
+        Templates
           .deserialize('web/views/templates/${text}.xml')
           .then((t){
             renderedOutput.value = t;

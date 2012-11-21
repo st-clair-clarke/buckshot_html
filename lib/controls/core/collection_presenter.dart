@@ -171,7 +171,7 @@ class CollectionPresenter
   }
 
   @override void onDraggableChanged(bool draggable){
-    throw new NotImplementedException('todo...');
+    throw new UnsupportedError('todo...');
   }
 
   /*
@@ -209,7 +209,7 @@ class CollectionPresenter
       });
     }else{
       items.forEach((iterationObject){
-        Template
+        Templates
         .deserialize(itemsTemplate.value)
         .then((SurfaceElement it){
           objectReference[it] = iterationObject;

@@ -157,7 +157,7 @@ class TreeView extends Control implements FrameworkContainer
   }
 
   void _initStyleTemplates(){
-    Template
+    Templates
       .deserialize('''
 <resourcecollection>
   <styletemplate key="__TreeView_mouse_enter_style_template__">

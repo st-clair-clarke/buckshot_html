@@ -1,7 +1,7 @@
 library calculator_model;
 
 import 'dart:math' as Math;
-import 'package:dartnet_event_model/events.dart';
+import 'package:dartnet_event_model/dartnet_event_model.dart';
 
 part 'i_calculator.dart';
 part 'output_changed_event_args.dart';

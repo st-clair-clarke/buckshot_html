@@ -55,7 +55,7 @@ class MenuStrip extends Control implements FrameworkContainer
     super.onLoaded();
     if (menus.value.isEmpty) return;
 
-    final cp = Template.findByName('__menu_strip_cp__', template);
+    final cp = Templates.findByName('__menu_strip_cp__', template);
     assert(cp != null);
     assert(cp is CollectionPresenter);
 

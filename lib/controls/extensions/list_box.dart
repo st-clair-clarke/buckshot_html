@@ -37,11 +37,11 @@ class ListBox extends Control implements FrameworkContainer
 
   ListBox()
   {
-    _presenter = Template
+    _presenter = Templates
       .findByName("__buckshot_listbox_presenter__", template)
         as CollectionPresenter;
 
-    _border = Template.findByName("__buckshot_listbox_border__", template);
+    _border = Templates.findByName("__buckshot_listbox_border__", template);
 
     assert(_presenter != null);
     assert(_border != null);

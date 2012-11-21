@@ -127,6 +127,6 @@ class TextBlock extends SurfaceText implements HtmlPlatformElement
   }
 
   @override void onDraggableChanged(bool draggable){
-    throw new NotImplementedException('todo...');
+    throw new UnsupportedError('todo...');
   }
 }

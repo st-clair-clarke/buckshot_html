@@ -172,7 +172,7 @@ class HtmlPlatform extends BoxModelSurface
     if (from.startsWith('#')) {
       return _HTML_ELEMENT;
     }else{
-      final t = new Template();
+      final t = new Templates();
 
       for(final p in t.providers){
         if(p.isFormat(from)){
@@ -203,7 +203,7 @@ class HtmlPlatform extends BoxModelSurface
       return new Future.immediate(false);
     }
 
-    return Template
+    return Templates
         .deserialize(document.body.attributes['data-buckshot-resources']);
   }
 

@@ -165,7 +165,7 @@ class ModalDialog extends Control
 
   void _initButtons(List buttons){
     final buttonsContainer =
-        Template.findByName('spButtonContainer', template) as Stack;
+        Templates.findByName('spButtonContainer', template) as Stack;
 
     for (final Button b in buttonsContainer.children){
       if (buttons.some((tb) => tb.toString() == b.content.value.toLowerCase())){
@@ -216,7 +216,7 @@ class ModalDialog extends Control
             converter: const StringToThicknessConverter()),
         converter: const StringToThicknessConverter());
 
-    cvRoot = Template.findByName('cvRoot', template);
+    cvRoot = Templates.findByName('cvRoot', template);
     assert(cvRoot != null);
     assert(cvRoot is Grid);
     // Override the underlying DOM element on this canvas so that it

@@ -4,7 +4,7 @@
 
 library webglcanvas_canvas_controls_buckshot;
 import 'package:buckshot_html/buckshot_html_browser.dart';
-import 'package:dartnet_event_model/events.dart';
+import 'package:dartnet_event_model/dartnet_event_model.dart';
 import 'package:buckshot_html/controls/extensions/canvas/canvas_base.dart';
 
 /**

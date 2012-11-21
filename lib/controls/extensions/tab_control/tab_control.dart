@@ -99,7 +99,7 @@ class TabControl extends Control implements FrameworkContainer
 
     // this is the collection of the visual elements representing each
     // tab
-    Stack pc = (Template.findByName('__tc_presenter__', template)
+    Stack pc = (Templates.findByName('__tc_presenter__', template)
         as CollectionPresenter)
         .presentationPanel
         .value;
@@ -113,7 +113,7 @@ class TabControl extends Control implements FrameworkContainer
         tabSelected.invokeAsync(this, new TabSelectedEventArgs(ti));
       };
 
-      final b = Template.findByName('__close_button__', e);
+      final b = Templates.findByName('__close_button__', e);
       assert(b != null);
 
       b.mouseUp + (_, __){

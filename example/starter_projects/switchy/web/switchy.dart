@@ -1,7 +1,7 @@
 library switchy_buckshot;
 
 import 'package:buckshot_html/buckshot_html_browser.dart';
-import 'package:dartnet_event_model/events.dart';
+import 'package:dartnet_event_model/dartnet_event_model.dart';
 import 'dart:isolate';
 // Import control extensions we want to use for this app
 import 'package:buckshot_html/controls/extensions/menus/menus.dart';
