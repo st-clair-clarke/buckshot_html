@@ -1,4 +1,4 @@
-<!-- 
+<!--
 Data Binding Demo
 
 This demo shows how Buckshot properties can be bound to data
@@ -11,18 +11,18 @@ if you assign an object to it, that object or it's properties
 can be bound to properties of the element.
 
 When elements declare a data binding (using '{data ...}'), the
-Framework tries to bind to whatever object is assigned 
-to the dataContext of that element.  If dataContext is null, 
-then the framework walks up the visual tree until it finds a 
+Framework tries to bind to whatever object is assigned
+to the dataContext of that element.  If dataContext is null,
+then the framework walks up the visual tree until it finds a
 dataContext that has some data, and attempts to bind to that.
 -->
 
-
+<template xmlns='http://buckshotui.org/platforms/html'>
 <stack>
   <resourcecollection>
-    <!-- 
-    Define a resource template for our borders since they share 
-    common properties. 
+    <!--
+    Define a resource template for our borders since they share
+    common properties.
     -->
     <styletemplate key="borderstyle">
       <setters>
@@ -41,7 +41,7 @@ dataContext that has some data, and attempts to bind to that.
 
   <textblock style='{resource headerText}' text='Binding to some color values.' />
   <stack orientation="horizontal">
-    <!-- these borders are binding to a sub-property of a property, using 
+    <!-- these borders are binding to a sub-property of a property, using
      Buckshot's dot notation resolver -->
     <border style="{resource borderstyle}" background="{data color.red}" />
     <border style="{resource borderstyle}" background="{data color.orange}" />
@@ -53,5 +53,6 @@ dataContext that has some data, and attempts to bind to that.
      <textbox placeholder='Type something here...' name='tbFirst' />
      <textblock text='<-->' />
      <textbox placeholder='Or here...' text='{element tbFirst.text, mode=twoway}' />
-  </stack>  
+  </stack>
 </stack>
+</template>

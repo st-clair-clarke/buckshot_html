@@ -11,8 +11,9 @@ class Stack extends SurfaceStack implements HtmlPlatformElement
     rawElement.style.display = '-webkit-flex';
     children.listChanged + onListChanged;
   }
-
   @override makeMe() => new Stack();
+
+  @override String get namespace => 'http://buckshotui.org/platforms/html';
 
   @override void initEvents(){
     HtmlPlatformElement.initializeBaseEvents(this);

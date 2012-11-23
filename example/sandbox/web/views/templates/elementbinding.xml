@@ -6,7 +6,7 @@ The controls on the left side are adjusting the properties of the
 boarder in the display area.  This is accomplished through
 declarative element-to-element binding.
 -->
-
+<template xmlns='http://buckshotui.org/platforms/html'>
 <stack>
   <textblock fontsize="24" text='This demo is written entirely with templates - no code.'/>
     <stack width="650" orientation="horizontal">
@@ -79,3 +79,4 @@ declarative element-to-element binding.
   <textblock margin="10,0,0,0" text="Video On How Element Binding Works:"/>
   <youtube width="300" height="250" videoid="WC25C5AHYAI"></youtube>
 </stack>
+</template>

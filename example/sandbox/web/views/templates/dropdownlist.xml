@@ -1,3 +1,4 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
 <stack>
   <textblock style='{resource headerText}' text="List From Data Source:"/>
 
@@ -24,5 +25,5 @@
 
   <!-- Element binding is used here to set the border's background color -->
   <border margin="5,0,0,0" width="75" height="75" background="{element ddlColors.selectedItem.item}"></border>
-
 </stack>
+</template>

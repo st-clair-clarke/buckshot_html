@@ -1,3 +1,4 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
 <stack>
   <textblock margin="0,10" text='Checkboxes' />
 
@@ -21,3 +22,4 @@
     <textblock margin="0,0,0,5" text='Option 4' />
   </stack>
 </stack>
+</template>

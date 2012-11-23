@@ -12,6 +12,6 @@ void main() {
 
   // platform.render() renders a View into the web page at the host DIV.
   platform.render(
-    new View.fromTemplate('<textblock text="Hello World!" />')
+    new View.fromTemplate('<template xmlns="http://buckshotui.org/platforms/html"><textblock text="Hello World!" /></template>')
   );
 }

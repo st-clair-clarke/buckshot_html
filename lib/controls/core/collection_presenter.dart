@@ -36,6 +36,8 @@ class CollectionPresenter
   }
   @override makeMe() => new CollectionPresenter();
 
+  @override String get namespace => 'http://buckshotui.org/platforms/html';
+
   @override get containerContent => presentationPanel.value;
 
   @override void onPanelChanged(SurfaceElement newPanel){

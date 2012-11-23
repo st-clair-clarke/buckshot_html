@@ -9,8 +9,8 @@ All of the ListBoxes are binding to collections in a view model, and then
 using client-side element binding to display the selected item from
 each list.
  -->
+<template xmlns='http://buckshotui.org/platforms/html'>
 <stack>
-
   <!-- declare resources for common settings -->
   <resourcecollection>
     <lineargradientbrush key="rowbg" direction="vertical" fallbackcolor="Orange">
@@ -54,6 +54,7 @@ each list.
   <stack orientation="horizontal">
     <listbox name="lbVertical" datacontext="{data icons}" height="150" width="300">
       <itemstemplate>
+        <template xmlns='http://buckshotui.org/platforms/html'>
         <border style="{resource rows}">
           <stack orientation="horizontal">
             <border width="64" height="64" margin="5,5">
@@ -65,6 +66,7 @@ each list.
             </stack>
           </stack>
         </border>
+        </template>
       </itemstemplate>
     </listbox>
 
@@ -83,6 +85,7 @@ each list.
         <stack valign='stretch' orientation="horizontal"></stack>
       </presentationpanel>
       <itemstemplate>
+        <template xmlns='http://buckshotui.org/platforms/html'>
         <border style="{resource rows}" width="150" valign='stretch'>
           <stack halign='stretch'>
             <border halign='stretch' height='65'>
@@ -92,6 +95,7 @@ each list.
             <textblock halign='stretch' foreground="Black" fontsize="12" text="{data description}"/>
           </stack>
         </border>
+        </template>
       </itemstemplate>
     </listbox>
 
@@ -110,3 +114,4 @@ each list.
 
   <textblock margin="20,0,0,0" fontsize="12">Icons used in this demo are licensed to LUCA Studios LLC and may not be redistributed.</textblock>
 </stack>
+</template>

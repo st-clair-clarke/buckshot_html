@@ -68,6 +68,7 @@ bool _platformInitialized = false;
 void initPlatform({String hostID : '#BuckshotHost'}){
   if (_platformInitialized) return;
   _htmlPlatform = new HtmlPlatform.host(hostID);
+  registerElement(new ControlTemplate.register());
   registerElement(new Border.register());
   registerElement(new TextBlock.register());
   registerElement(new Stack.register());
@@ -75,7 +76,6 @@ void initPlatform({String hostID : '#BuckshotHost'}){
   registerElement(new Image.register());
   registerElement(new ContentPresenter.register());
   registerElement(new CollectionPresenter.register());
-  registerElement(new ControlTemplate.register());
   registerElement(new Slider.register());
   registerElement(new Button.register());
   registerElement(new RadioButton.register());

@@ -8,12 +8,12 @@ measurement types:
      star-type peers.
    - Auto. Attempts to size to the largest element in the row or column
 
-In this demo, the first row is and "auto" type, and the textblock is using a 
+In this demo, the first row is and "auto" type, and the textblock is using a
 grid.columnspan attached property to span across all 4 columns.
 
-The remaining rows are laid out equally spaced with "*" (star-type). 
+The remaining rows are laid out equally spaced with "*" (star-type).
 
-The columns are more interesting.  Notice how the first column is 
+The columns are more interesting.  Notice how the first column is
 automatically the size of the largest text element.
 
 For the next 2 columns, notice how the "*2" column is exactly twice as big as the
@@ -21,6 +21,7 @@ For the next 2 columns, notice how the "*2" column is exactly twice as big as th
 
 The fourth column is pixel-type of 100, and remains fixed in place.
 -->
+<template xmlns='http://buckshotui.org/platforms/html'>
 <stack>
   <resourcecollection>
      <lineargradientbrush direction="vertical" key="gridbg" fallbackcolor="PowderBlue">
@@ -29,7 +30,7 @@ The fourth column is pixel-type of 100, and remains fixed in place.
          <gradientstop color="Orange"></gradientstop>
        </stops>
      </lineargradientbrush>
-     
+
      <styletemplate key='borderCell'>
         <setters>
            <setter property='borderColor' value='Black' />
@@ -52,9 +53,9 @@ The fourth column is pixel-type of 100, and remains fixed in place.
       <rowdefinition height="*"></rowdefinition>
       <rowdefinition height="*"></rowdefinition>
     </rowdefinitions>
-  
+
     <textblock text="Grid Demo" grid.columnspan="4" halign="center"/>
-  
+
     <border grid.row="1" style='{resource borderCell}'>
       <textblock style='{resource defaultText}'>auto</textblock>
     </border>
@@ -67,7 +68,7 @@ The fourth column is pixel-type of 100, and remains fixed in place.
     <border grid.row="1" grid.column="3" style='{resource borderCell}'>
       <textblock style='{resource defaultText}'>pixel 100</textblock>
     </border>
-    
+
     <border grid.row="2" borderthickness="1" bordercolor="Black" valign='stretch'>
       <textblock style='{resource defaultText}'>auto column</textblock>
     </border>
@@ -80,7 +81,7 @@ The fourth column is pixel-type of 100, and remains fixed in place.
     <border grid.row="2" grid.column="3" style='{resource borderCell}'>
       <textblock style='{resource defaultText}'>pixel 100</textblock>
     </border>
-    
+
     <border grid.row="3" style='{resource borderCell}'>
       <textblock style='{resource defaultText}'>auto</textblock>
     </border>
@@ -93,6 +94,6 @@ The fourth column is pixel-type of 100, and remains fixed in place.
     <border grid.row="3" grid.column="3" style='{resource borderCell}'>
       <textblock style='{resource defaultText}'>pixel 100</textblock>
     </border>
-  
   </grid>
 </stack>
+</template>

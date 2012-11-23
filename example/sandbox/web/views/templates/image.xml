@@ -1,4 +1,6 @@
-<stack orientation='horizontal'>
-  <textblock valign='center' text='Like this logo for Buckshot?' />
-  <image alt="Buckshot Logo Candidate" uri="web/resources/buckshot_logo.png" />
-</stack>
+<template xmlns='http://buckshotui.org/platforms/html'>
+  <stack orientation='horizontal'>
+    <textblock valign='center' text='Like this logo for Buckshot?' />
+    <image alt="Buckshot Logo Candidate" uri="web/resources/buckshot_logo.png" />
+  </stack>
+</template>

@@ -4,6 +4,8 @@ abstract class HtmlPlatformElement implements BoxModelElement
 {
   Element rawElement;
 
+  @override String get namespace => 'http://buckshotui.org/platforms/html';
+
   static final Expando<RectMeasurement> _previousPosition =
       new Expando<RectMeasurement>();
   static final Expando<RectMeasurement> _previousMeasurement =

@@ -17,6 +17,7 @@ class Main extends View
 // put template into the sandbox html page, or load it from a Uri.
 String _view =
 r'''
+<template xmlns='http://buckshotui.org/platforms/html'>
 <border bordercolor='Black' borderthickness='1' padding='5'>
     <Stack>
       <textblock text="TO-DO List" fontsize="24"></textblock>
@@ -47,14 +48,17 @@ r'''
           </Stack>
           <collectionpresenter items="{data items}">
             <itemstemplate>
-              <Stack orientation="horizontal" margin="2,0,0,0">
-                <textblock background="#334455" foreground="White" width="85" margin="5,0" text="{data date}"></textblock>
-                <textblock background="#334455" foreground="White" width="200" margin="5,0" text="{data task}"></textblock>
-              </Stack>
+              <template xmlns='http://buckshotui.org/platforms/html'>
+                <Stack orientation="horizontal" margin="2,0,0,0">
+                  <textblock background="#334455" foreground="White" width="85" margin="5,0" text="{data date}"></textblock>
+                  <textblock background="#334455" foreground="White" width="200" margin="5,0" text="{data task}"></textblock>
+                </Stack>
+              </template>
             </itemstemplate>
           </collectionpresenter>
         </Stack>
       </border>
     </Stack>
 </border>
+</template>
 ''';

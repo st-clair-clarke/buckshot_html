@@ -1,3 +1,4 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
 <stack>
    <textblock style='{resource headerText}'>You can scale, rotate, and translate any Buckshot element.</textblock>
 
@@ -62,3 +63,4 @@
       </border>
    </stack>
 </stack>
+</template>

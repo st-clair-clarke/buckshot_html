@@ -1,3 +1,4 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
 <stack>
   <resourcecollection>
      <styletemplate key='defaultBorder'>
@@ -46,3 +47,4 @@
      </border>
   </stack>
 </stack>
+</template>

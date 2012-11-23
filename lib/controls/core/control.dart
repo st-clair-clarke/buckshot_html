@@ -32,6 +32,8 @@ abstract class Control
   Control.register() : super.register();
   @override makeMe() => null;
 
+  @override String get namespace => 'http://buckshotui.org/platforms/html';
+
   @override void initProperties(){
     super.initProperties();
 
@@ -328,8 +330,6 @@ class ControlTemplate extends FrameworkResource implements FrameworkContainer
   FrameworkProperty<FrameworkObject> template;
 
   ControlTemplate(){
-    _initializeControlTemplateProperties();
-
     //redirect the resource finder to the template property
     //otherwise the ControlTemplate itself would be retrieved as the resource
     this.stateBag[FrameworkObject.CONTAINER_CONTEXT] = template;
@@ -338,9 +338,12 @@ class ControlTemplate extends FrameworkResource implements FrameworkContainer
   ControlTemplate.register() : super.register();
   makeMe() => new ControlTemplate();
 
-  get containerContent => template.value;
+  @override String get namespace => 'http://buckshotui.org/platforms/html';
 
-  void _initializeControlTemplateProperties(){
+  @override get containerContent => template.value;
+
+  @override void initProperties(){
+    super.initProperties();
     controlType = new FrameworkProperty(this, "controlType",
         defaultValue:"");
 

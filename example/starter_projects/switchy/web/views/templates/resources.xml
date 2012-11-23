@@ -1,10 +1,10 @@
-<!-- 
+<!--
 Global resources template.
 
-This template holds global resources that elements in other templates 
-can bind to.  
+This template holds global resources that elements in other templates
+can bind to.
 
-It is important to load this template first, so that other templates 
+It is important to load this template first, so that other templates
 that reference resources within it will find them.
 -->
 <resourcecollection>
@@ -12,24 +12,24 @@ that reference resources within it will find them.
     <lineargradientbrush key="calcBackground" direction="vertical">
       <stops>
         <gradientstop color="#FEFEFF" />
-      	<gradientstop color="#CECEFF" />  
+      	<gradientstop color="#CECEFF" />
       </stops>
     </lineargradientbrush>
-    
+
     <lineargradientbrush key="outputBackground" direction="vertical">
       <stops>
-      	<gradientstop color="#DFDFFF" />  
+      	<gradientstop color="#DFDFFF" />
         <gradientstop color="#FEFEFF" />
       </stops>
     </lineargradientbrush>
-    
+
 	<styletemplate key='defaultText'>
 		<setters>
 			<setter property='fontFamily' value='Consolas' />
 			<setter property='fontSize' value='16' />
 		</setters>
 	</styletemplate>
-					    
+
 	<styletemplate key='calcStyle'>
 		<setters>
 			<setter property='background' value='{resource calcBackground}' />
@@ -42,17 +42,17 @@ that reference resources within it will find them.
 			<setter property='shadowY' value='{resource theme_shadow_y}' />
 			<setter property='shadowBlur' value='{resource theme_shadow_blur}' />
 		</setters>
-	</styletemplate>		    
-    
+	</styletemplate>
+
     <styletemplate key='calcHeader'>
     	<setters>
     		<setter property='background' value='{resource calcBackground}' />
     		<setter property='cornerRadius' value='5' />
 			<setter property='vAlign' value='stretch' />
-			<setter property='hAlign' value='stretch' />	
+			<setter property='hAlign' value='stretch' />
     	</setters>
     </styletemplate>
-    
+
 	<styletemplate key='borderSeperator'>
 		<setters>
 			<setter property='borderThickness' value='1' />
@@ -82,19 +82,19 @@ that reference resources within it will find them.
 			<setter property='fontFamily' value='Consolas' />
 		</setters>
 	</styletemplate>
-	
+
 	<styletemplate key='textblockSubOutput'>
 		<setters>
 			<setter property='fontSize' value='14' />
 			<setter property='fontFamily' value='Consolas' />
 		</setters>
 	</styletemplate>
-	
+
 	<styletemplate key='buttonDefaultStyle'>
 		<setters>
 			<setter property='vAlign' value='stretch' />
 			<setter property='hAlign' value='stretch' />
 			<setter property='margin' value='3' />
 		</setters>
-	</styletemplate>		
+	</styletemplate>
 </resourcecollection>

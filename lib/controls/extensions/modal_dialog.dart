@@ -229,7 +229,8 @@ class ModalDialog extends Control
   String get defaultControlTemplate {
     return
         '''
-<controltemplate controlType='${this.templateName}'>
+<controltemplate xmlns='http://buckshotui.org/platforms/html' controlType='${this.templateName}'>
+ <template>
   <grid name='cvRoot' zorder='32766'>
     <rowdefinitions>
       <rowdefinition height='*' />
@@ -267,6 +268,7 @@ class ModalDialog extends Control
       </stack>
     </border>
   </grid>
+ </template>
 </controltemplate>
         ''';
   }

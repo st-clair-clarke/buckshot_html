@@ -134,7 +134,7 @@ class Menu extends Control implements FrameworkContainer
 
   @override get defaultControlTemplate {
     return '''
-<controltemplate controlType='${this.templateName}'>
+<controltemplate xmlns='http://buckshotui.org/platforms/html' controlType='${this.templateName}'>
   <template>
     <border zorder='32766'
             minwidth='20'
@@ -144,7 +144,8 @@ class Menu extends Control implements FrameworkContainer
             hittest='none'>
       <collectionpresenter halign='stretch' items='{template menuItems}'>
          <itemstemplate>
-           <border hittest='all' cursor='Arrow' padding='{resource theme_menu_padding}' background='{resource theme_dark_brush}' halign='stretch'>
+           <template xmlns='http://buckshotui.org/platforms/html'>
+            <border hittest='all' cursor='Arrow' padding='{resource theme_menu_padding}' background='{resource theme_dark_brush}' halign='stretch'>
               <actions>
                 <setproperty event='mouseEnter' property='background' value='{resource theme_menu_background_hover_brush}' />
                 <setproperty event='mouseLeave' property='background' value='{resource theme_menu_background_brush}' />
@@ -152,7 +153,8 @@ class Menu extends Control implements FrameworkContainer
                 <setproperty event='mouseUp' property='background' value='{resource theme_menu_background_hover_brush}' />
               </actions>
               <contentpresenter content='{data}' />
-           </border>
+            </border>
+           </template>
          </itemstemplate>
       </collectionpresenter>
     </border>

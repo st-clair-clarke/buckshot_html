@@ -1,3 +1,4 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
 <border halign='center' valign='center' background='#165284' width='210' height='210' cornerradius='120' padding='10' shadowx='3' shadowy='3' shadowblur='7'>
   <resourcecollection>
     <lineargradientbrush key='date_background' direction='vertical'>
@@ -74,3 +75,4 @@
 
   </grid>
 </border>
+</template>

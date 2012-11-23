@@ -1,3 +1,4 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
   <dockpanel background='#AABBEE' halign='stretch' valign='stretch'>
      <menustrip on.menuitemselected='menu_selected' dockpanel.dock='top'>
        <menu tag='home'>
@@ -122,3 +123,4 @@
      	content='{data content}'>
      </border>
   </dockpanel>
+</template>

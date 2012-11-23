@@ -14,6 +14,8 @@ class TextBlock extends SurfaceText implements HtmlPlatformElement
   TextBlock.register() : super.register();
   makeMe() => new TextBlock();
 
+  @override String get namespace => 'http://buckshotui.org/platforms/html';
+
   @override void initEvents(){
     HtmlPlatformElement.initializeBaseEvents(this);
     super.initEvents();

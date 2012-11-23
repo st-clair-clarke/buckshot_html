@@ -60,7 +60,7 @@ class ListBox extends Control implements FrameworkContainer
 
   String get defaultControlTemplate {
     return
-    '''<controltemplate controlType="${this.templateName}">
+    '''<controltemplate xmlns='http://buckshotui.org/platforms/html' controlType="${this.templateName}">
           <template>
             <border bordercolor='{resource theme_border_color}'
                     background='{resource theme_light_brush}'

@@ -7,9 +7,9 @@ class Image extends SurfaceImage implements HtmlPlatformElement
 
   Image.register() : super.register();
   Image();
-
   @override makeMe() => new Image();
 
+  @override String get namespace => 'http://buckshotui.org/platforms/html';
   /*
    * SurfaceImage overrides.
    */

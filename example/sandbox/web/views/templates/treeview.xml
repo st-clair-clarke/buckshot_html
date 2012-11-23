@@ -1,3 +1,4 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
 <stack>
    <treeview on.treenodeselected='demotreeview_selection' borderthickness='1' bordercolor='Black' >
       <treenode childvisibility='visible' header='Tree Node L1A' >
@@ -15,9 +16,10 @@
       </treenode>
       <treenode header='Tree Node L1B' />
    </treeview>
-   
+
    <stack orientation='horizontal'>
       <textblock style='{resource defaultText}' text='Your selection:' margin='0,10,0,0' />
       <textblock background='WhiteSmoke' style='{resource defaultText}' text='{data demoTreeNodeSelected}' />
    </stack>
 </stack>
+</template>

@@ -1,1 +1,3 @@
-<textblock halign='center' fontsize='28' text='About Switchy' />
+<template xmlns='http://buckshotui.org/platforms/html'>
+  <textblock halign='center' fontsize='28' text='About Switchy' />
+</template>

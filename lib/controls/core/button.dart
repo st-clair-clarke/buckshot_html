@@ -36,7 +36,7 @@ class Button extends Control implements FrameworkContainer
   String get defaultControlTemplate {
     return
 '''
-<controltemplate controlType='${this.templateName}'>
+<controltemplate xmlns='http://buckshotui.org/platforms/html' controlType='${this.templateName}'>
   <template>
     <border zorder='32766'
             minwidth='20'

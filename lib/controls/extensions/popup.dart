@@ -149,7 +149,7 @@ class Popup extends Control
   String get defaultControlTemplate {
     return
 '''
-<controltemplate controlType='${this.templateName}'>
+<controltemplate xmlns='http://buckshotui.org/platforms/html' controlType='${this.templateName}'>
     <border name='__borderRoot__'
             shadowx='{resource theme_popup_shadow_x}'
             shadowy='{resource theme_popup_shadow_y}'

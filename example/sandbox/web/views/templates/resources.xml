@@ -13,21 +13,21 @@ To apply a resource to a property, use the binding syntax:
 property="{resource [nameOfResource]}"
 
 -->
-
+<template xmlns='http://buckshotui.org/platforms/html'>
 <stack>
-  
-  <!-- 
+
+  <!--
   <resourcecollection> is used to declare a group of resources.
   The framework will parse the collection make the resources available
   to elements.  Resources are application scope, meaning that once declared,
   they are available to all elements within an application.
-  --> 
+  -->
   <resourcecollection>
 
     <!-- here we are declaring a brush resource -->
     <lineargradientbrush key="lgb" direction="vertical">
       <stops>
-        <gradientstop color="Red"></gradientstop>     
+        <gradientstop color="Red"></gradientstop>
         <gradientstop color="White"></gradientstop>
         <gradientstop color="Blue"></gradientstop>
       </stops>
@@ -41,8 +41,8 @@ property="{resource [nameOfResource]}"
         <gradientstop color="Blue"></gradientstop>
       </stops>
     </radialgradientbrush>
-  
-    <!-- 
+
+    <!--
     This styletemplate resource sets a group of property values
     that can be assigned to an element's 'style' property.  Notice how
     the background property is binding to the lineargradientbrush resource
@@ -92,11 +92,11 @@ property="{resource [nameOfResource]}"
         <setter property="fontSize" value="14" />
       </setters>
     </styletemplate>
-  
+
   </resourcecollection>
   <stack orientation="horizontal">
 
-     <!-- 
+     <!--
       notice the binding syntax which tells the framework to look for the
       resource with the key 'firstborder' and apply it to the 'style' property.
        -->
@@ -126,3 +126,4 @@ property="{resource [nameOfResource]}"
   <textblock text="Short Video On How Resources Work:"/>
   <youtube width="300" height="250" videoid="cFxf3OBIj8Q"></youtube>
 </stack>
+</template>

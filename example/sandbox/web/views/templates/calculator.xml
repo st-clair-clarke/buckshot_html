@@ -1,3 +1,4 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
 <border hittest='none' style='{resource calcStyle}'>
 	<grid width='{data width}' height='400'>
 		<rowdefinitions>
@@ -44,3 +45,4 @@
 		<border margin='5,5' halign='stretch' valign='stretch' grid.row='2' content='{data keypad}'></border>
 	</grid>
 </border>
+</template>

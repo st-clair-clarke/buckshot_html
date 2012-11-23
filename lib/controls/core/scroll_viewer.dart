@@ -7,8 +7,9 @@ class ScrollViewer extends SurfaceScrollViewer implements HtmlPlatformElement
 
   ScrollViewer.register() : super.register();
   ScrollViewer();
-
   @override makeMe() => new ScrollViewer();
+
+  @override String get namespace => 'http://buckshotui.org/platforms/html';
 
   /*
    * SurfaceScrollViewer overrides.

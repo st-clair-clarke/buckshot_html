@@ -1,3 +1,4 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
 <stack halign='center'>
   <border background='{resource theme_dark_brush}' halign='center' borderthickness='3' bordercolor='SteelBlue' margin='35' padding='10' shadowx='3' shadowy='3' shadowblur='4' shadowcolor='Gray' rotatez='-5'>
     <stack>
@@ -12,3 +13,4 @@
     </stack>
   </border>
 </stack>
+</template>

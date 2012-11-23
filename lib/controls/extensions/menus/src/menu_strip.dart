@@ -106,7 +106,7 @@ class MenuStrip extends Control implements FrameworkContainer
 
   @override get defaultControlTemplate {
     return '''
-<controltemplate controlType='${this.templateName}'>
+<controltemplate xmlns='http://buckshotui.org/platforms/html' controlType='${this.templateName}'>
   <template>
     <border background='{resource theme_menu_background_brush}'>
       <collectionpresenter name='__menu_strip_cp__' halign='stretch' items='{template menus}'>
@@ -114,7 +114,8 @@ class MenuStrip extends Control implements FrameworkContainer
             <stack cursor='Arrow' orientation='{template orientation}'></stack>
          </presentationpanel>
          <itemstemplate>
-           <stack>
+           <template xmlns='http://buckshotui.org/platforms/html'>
+            <stack>
               <border padding='{resource theme_border_padding}' background='{resource theme_menu_background_brush}' halign='stretch'>
                 <actions>
                    <setproperty event='mouseEnter' property='background' value='{resource theme_menu_background_hover_brush}' />
@@ -125,7 +126,8 @@ class MenuStrip extends Control implements FrameworkContainer
                 <contentpresenter content='{data header}' />
               </border>
               <contentpresenter content='{data}' />
-           </stack>
+            </stack>
+           </template>
          </itemstemplate>
       </collectionpresenter>
     </border>

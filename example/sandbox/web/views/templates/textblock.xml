@@ -1,4 +1,5 @@
-<stack>
+<template xmlns='http://buckshotui.org/platforms/html'>
+  <stack>
    <!-- Inline -->
    <textblock style='{resource defaultText}' text="Hello World!" />
 
@@ -13,4 +14,5 @@
 
    <!-- Other properties -->
    <textblock fontsize='48' foreground='Green' fontfamily='courier' text='Buckshot!' />
-</stack>
+  </stack>
+</template>

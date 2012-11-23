@@ -1,4 +1,6 @@
-<stack>
+<template xmlns='http://buckshotui.org/platforms/html'>
+  <stack>
     <textblock fontfamily="arial" text="About Buckshot Templates" />
     <youtube margin="10" videoid="LOacOkmd9FI" width="400" height="300" />
-</stack> 
+  </stack>
+</template>

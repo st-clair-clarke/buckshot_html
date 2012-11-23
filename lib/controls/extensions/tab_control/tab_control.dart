@@ -157,7 +157,7 @@ class TabControl extends Control implements FrameworkContainer
   @override get defaultControlTemplate {
     return
 '''
-<controltemplate controlType='${this.templateName}'>
+<controltemplate xmlns='http://buckshotui.org/platforms/html' controlType='${this.templateName}'>
   <template>
      <grid hittest='none' valign='{template vAlign}' halign='{template hAlign}' height='{template height}' width='{template width}'>
         <rowdefinitions>
@@ -169,7 +169,8 @@ class TabControl extends Control implements FrameworkContainer
               <stack orientation='horizontal' />
            </presentationpanel>
            <itemstemplate>
-              <border hittest='all' name='tab_border' valign='stretch' cursor='Arrow' background='{resource theme_dark_brush}' margin='0,1,0,0' borderthickness='1,1,0,1' bordercolor='{resource theme_border_color}' padding='2'>
+              <template xmlns='http://buckshotui.org/platforms/html'>
+               <border hittest='all' name='tab_border' valign='stretch' cursor='Arrow' background='{resource theme_dark_brush}' margin='0,1,0,0' borderthickness='1,1,0,1' bordercolor='{resource theme_border_color}' padding='2'>
                  <stack orientation='horizontal'>
                     <contentpresenter hittest='none' content='{data icon}' margin='0,2,0,0' />
                     <contentpresenter hittest='none' content='{data header}' margin='0,3,0,0' />
@@ -185,7 +186,8 @@ class TabControl extends Control implements FrameworkContainer
                       </border>
                     </border>
                  </stack>
-              </border>
+               </border>
+              </template>
            </itemstemplate>
         </collectionpresenter>
         <border name='__content_border__' 

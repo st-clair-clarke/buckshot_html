@@ -10,10 +10,11 @@ class Border extends SurfaceBorder implements HtmlPlatformElement
     rawElement.style.display = '-webkit-flex';
     rawElement.style.boxSizing = 'border-box';
   }
-
   @override makeMe() => new Border();
 
-  get containerContent => content.value;
+  @override String get namespace => 'http://buckshotui.org/platforms/html';
+
+  @override get containerContent => content.value;
 
   @override void initEvents(){
     HtmlPlatformElement.initializeBaseEvents(this);

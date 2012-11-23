@@ -1,3 +1,4 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
 <stack halign='stretch'>
   <textblock style='{resource headerText}' text='Buckshot supports simple text menus like below:' />
   <menustrip halign='stretch'>
@@ -173,3 +174,4 @@
   </menu>
 </menustrip>
 </stack>
+</template>

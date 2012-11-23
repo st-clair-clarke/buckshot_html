@@ -114,7 +114,7 @@ class Accordion extends Control implements FrameworkContainer
   String get defaultControlTemplate {
     return
 '''
-<controltemplate controlType='${this.templateName}'>
+<controltemplate xmlns='http://buckshotui.org/platforms/html' controlType='${this.templateName}'>
   <template>
     <border background='{template background}' cursor='Arrow'>
       <collectionpresenter hittest='none' halign='stretch' name='__ac_presenter__' items='{template accordionItems}'>
@@ -122,10 +122,12 @@ class Accordion extends Control implements FrameworkContainer
             <stack halign='stretch' />
          </presentationpanel>
          <itemstemplate>
+           <template xmlns='http://buckshotui.org/platforms/html'>
             <stack halign='stretch'>
               ${headerTemplate}
               ${bodyTemplate}
             </stack>
+           </template>
          </itemstemplate>
       </collectionpresenter>
     </border>
@@ -140,7 +142,7 @@ class Accordion extends Control implements FrameworkContainer
    */
   String get headerTemplate =>
 '''
- <border name='__accordion_header__' 
+  <border name='__accordion_header__' 
          padding='{resource theme_border_padding}' 
          borderthickness='{resource theme_accordion_header_border_thickness}' 
          bordercolor='{resource theme_border_color}' 
@@ -162,7 +164,7 @@ class Accordion extends Control implements FrameworkContainer
                    value='{resource theme_accordion_background_hover_brush}' />
     </actions>
     <contentpresenter halign='stretch' content='{data header}' />                   
- </border>
+  </border>
 ''';
 
   /**
@@ -171,12 +173,12 @@ class Accordion extends Control implements FrameworkContainer
    */
   String get bodyTemplate =>
 '''
- <border name='__accordion_body__' 
+  <border name='__accordion_body__' 
          halign='stretch' 
          background='{resource theme_accordion_body_background_brush}'
          hittest='none'>
-   <contentpresenter hittest='all' halign='stretch' content='{data body}' />
- </border>
+    <contentpresenter hittest='all' halign='stretch' content='{data body}' />
+  </border>
 ''';
 
 }

@@ -23,7 +23,7 @@ class MenuItem extends Control
 
   @override get defaultControlTemplate {
     return '''
-<controltemplate controlType='${this.templateName}'>
+<controltemplate xmlns='http://buckshotui.org/platforms/html' controlType='${this.templateName}'>
   <template>
     <stack orientation='horizontal' halign='stretch' maxheight='50'>
        <contentpresenter valign='center' minwidth='25' maxwidth='25' content='{template icon}' />

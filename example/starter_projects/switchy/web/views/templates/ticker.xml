@@ -1,3 +1,4 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
 <stack halign='center' valign='center'>
 	<textblock halign='center' maxwidth='400'>
 	This simple stock ticker demo will, at random intervals, display updates from fictional
@@ -20,11 +21,13 @@
 				   <scrollviewer vscroll='visible' halign='stretch' valign='stretch' margin='5'>
 				   		<collectionpresenter items='{data tickerOutput}'>
 				   		  <itemstemplate>
+				   		    <template xmlns='http://buckshotui.org/platforms/html'>
 				   		  	<stack orientation='horizontal'>
 				   		  		<textblock margin='5' minwidth='60' foreground='White' text='{data datetime}' />
 			   		  			<textblock margin='5' minwidth='60' foreground='White' text='{data symbol}' />
 				   		  		<textblock margin='5' foreground='{data directionColor}' text='{data quote}' />
 				   		  	</stack>
+				   		  	</template>
 				   		  </itemstemplate>
 				   		</collectionpresenter>
 				   </scrollviewer>
@@ -48,3 +51,4 @@
 
 	</stack>
 </stack>
+</template>

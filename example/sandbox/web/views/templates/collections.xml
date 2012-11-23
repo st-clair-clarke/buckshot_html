@@ -1,3 +1,4 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
 <stack>
   <!-- declare resources for common settings -->
   <resourcecollection>
@@ -63,6 +64,7 @@
     list.
     -->
     <itemstemplate>
+     <template xmlns='http://buckshotui.org/platforms/html'>
       <stack orientation="horizontal">
         <border valign='stretch' width="150" style="{resource rows}">
           <textblock halign='stretch' foreground="Black" text="{data title}"/>
@@ -74,8 +76,10 @@
           <youtube margin="10" videoid="{data hash}" width="300" height="200"></youtube>
         </border>
       </stack>
+     </template>
     </itemstemplate>
   </collectionpresenter>
   <textblock margin="10,0,0,0">To see the view model that this demo is binding to:</textblock>
   <hyperlink content="View Model Code in Dart" targetname="_blank" navigateto="https://github.com/prujohn/Buckshot/blob/master/demos/tryit/DemoViewModel.dart"></hyperlink>
 </stack>
+</template>

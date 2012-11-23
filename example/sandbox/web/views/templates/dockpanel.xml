@@ -1,3 +1,4 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
 <stack>
    <resourcecollection>
       <styletemplate key='borderStyle'>
@@ -39,3 +40,4 @@
       <button on.click='dockpanel_click' content='Bottom'/>
    </stack>
 </stack>
+</template>

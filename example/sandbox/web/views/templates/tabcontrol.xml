@@ -1,4 +1,5 @@
-<stack>
+<template xmlns='http://buckshotui.org/platforms/html'>
+  <stack>
    <textblock style='{resource headerText}' text='TabControl allows you to group content into tabs.' />
    <tabcontrol margin='10,0,0,0' background='{resource theme_dark_brush}' width='600' height='340'>
       <tabitem header='Actions' closeenabled='false'>
@@ -17,4 +18,5 @@
          <youtube width='350' height='300' videoid='6DWP-E7omJs' />
       </tabitem>
    </tabcontrol>
-</stack>
+  </stack>
+</template>

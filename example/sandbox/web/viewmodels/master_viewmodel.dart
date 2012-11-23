@@ -203,7 +203,9 @@ class MasterViewModel extends ViewModelBase
   void _showModalDialogDemo(){
     final titleView = new View.fromTemplate(
 '''
-<textblock fontsize='20' text='Modal Dialog Box Title' />
+<template xmlns='http://buckshotui.org/platforms/html'>
+  <textblock fontsize='20' text='Modal Dialog Box Title' />
+</template>
 '''
     );
 
@@ -406,8 +408,6 @@ class MasterViewModel extends ViewModelBase
             ..warning('Unable to parse dock panel direction for $sender');
           break;
       }
-
       (dp as DockPanel).invalidate();
   }
-
 }

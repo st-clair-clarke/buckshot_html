@@ -1,3 +1,5 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
 <border halign='center' maxwidth='650' borderColor="Red" borderThickness="3" padding="5" background="Yellow">
   <textblock halign='stretch' foreground="Red" text="{data errorMessage}" />
 </border>
+</template>

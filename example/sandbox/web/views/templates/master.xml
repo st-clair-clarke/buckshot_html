@@ -1,3 +1,4 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
 <dockpanel halign='stretch' valign='stretch'>
   <resourcecollection>
     <color key="buckshot_blue" value="#165284"></color>
@@ -81,23 +82,23 @@
      	       <textblock style='{resource defaultText}' text='Controls' />
      	     </header>
      	     <body>
-     	        <treeview on.treenodeselected='selection_handler'>
-     	            <treenode header='Menus' tag='menus' />
-			        <treenode header='TabControl' tag='tabcontrol' />
-			     	<treenode header='TreeView' tag='treeview' />
-			     	<treenode header='DockPanel' tag='dockpanel' />
-			     	<treenode header='Accordion' tag='accordion' />
-			     	<treenode header='ListBox' tag='listbox' />
-			     	<treenode header='ModalDialog' tag='modaldialog' />
-			     	<treenode header='Popup' tag='popup' />
-			     	<treenode header='DropDownList' tag='dropdownlist' />
-			     	<treenode header='TextBox' tag='textbox' />
-			     	<treenode header='Slider' tag='slider' />
-			     	<treenode header='Button' tag='button' />
-			     	<treenode header='RadioButton' tag='radiobutton' />
-			     	<treenode header='CheckBox' tag='checkbox' />
-			     	<treenode header='Hyperlink' tag='hyperlink' />
-	  	        </treeview>
+     	       <treeview on.treenodeselected='selection_handler'>
+     	         <treenode header='Menus' tag='menus' />
+			         <treenode header='TabControl' tag='tabcontrol' />
+			     	   <treenode header='TreeView' tag='treeview' />
+			     	   <treenode header='DockPanel' tag='dockpanel' />
+			     	   <treenode header='Accordion' tag='accordion' />
+			     	   <treenode header='ListBox' tag='listbox' />
+			     	   <treenode header='ModalDialog' tag='modaldialog' />
+			     	   <treenode header='Popup' tag='popup' />
+			     	   <treenode header='DropDownList' tag='dropdownlist' />
+			     	   <treenode header='TextBox' tag='textbox' />
+			     	   <treenode header='Slider' tag='slider' />
+			     	   <treenode header='Button' tag='button' />
+			     	   <treenode header='RadioButton' tag='radiobutton' />
+			     	   <treenode header='CheckBox' tag='checkbox' />
+			     	   <treenode header='Hyperlink' tag='hyperlink' />
+	  	       </treeview>
      	     </body>
      	   </accordionitem>
      	   <accordionitem>
@@ -156,3 +157,4 @@
 
   </dockpanel>
 </dockpanel>
+</template>

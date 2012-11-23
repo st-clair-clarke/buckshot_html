@@ -170,7 +170,7 @@ class TreeNode extends Control implements FrameworkContainer
 
   @override String get defaultControlTemplate {
     return
-    '''<controltemplate controlType="${this.templateName}">
+    '''<controltemplate xmlns='http://buckshotui.org/platforms/html' controlType="${this.templateName}">
           <template>
             <stack hittest='none'>
               <stack orientation='horizontal'>
@@ -184,7 +184,9 @@ class TreeNode extends Control implements FrameworkContainer
               </stack>
               <collectionpresenter name='__tree_node_cp__' visibility='{template childVisibility}' items='{template childNodes}'>
                 <itemstemplate>
-                  <contentpresenter margin='0,0,0,20' content='{data}' />
+                  <template xmlns='http://buckshotui.org/platforms/html'>
+                    <contentpresenter margin='0,0,0,20' content='{data}' />
+                  </template>
                 </itemstemplate>
               </collectionpresenter>
             </stack>

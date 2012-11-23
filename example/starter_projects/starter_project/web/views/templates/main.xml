@@ -1,3 +1,4 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
   <border halign='center' valign='center' borderthickness='3' bordercolor='SteelBlue'
   	 	  cornerradius='9' background='WhiteSmoke' padding='5'>
 
@@ -34,3 +35,4 @@
 			<textblock halign='center' margin='5' fontsize='14' fontfamily='Arial' text='{data result}' />
 		</stack>
   </border>
+</template>

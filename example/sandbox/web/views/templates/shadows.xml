@@ -1,3 +1,4 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
 <stack>
    <textblock style='{resource headerText}'>Buckshot elements support box shadows.</textblock>
    <stack margin='10,0,0,0' orientation='horizontal'>
@@ -47,3 +48,4 @@
       </border>
    </stack>
 </stack>
+</template>

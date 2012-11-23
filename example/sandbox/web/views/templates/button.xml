@@ -1,3 +1,4 @@
+<template xmlns='http://buckshotui.org/platforms/html'>
 <stack>
   <textblock margin="0,10" text='Buttons can contain text or other elements.' />
   <button width="80">text button</button>
@@ -7,3 +8,4 @@
     </border>
   </button>
 </stack>
+</template>

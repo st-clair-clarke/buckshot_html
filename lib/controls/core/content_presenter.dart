@@ -13,9 +13,9 @@ class ContentPresenter
     rawElement.style.boxSizing = 'border-box';
     hitTest.value = HitTestVisibility.none;
   }
-
   @override makeMe() => new ContentPresenter();
 
+  @override String get namespace => 'http://buckshotui.org/platforms/html';
 
   @override void updateLayout(){
     if (content.value == null) return;
