@@ -411,4 +411,85 @@ abstract class HtmlPlatformElement implements BoxModelElement
 
     return c.future;
   }
+
+  /**
+   * Helper method which performs a transform on the given element based
+   * on current transform values.  Tolerates null values.
+   */
+  static void doTransform(HtmlPlatformElement e){
+
+    var tx = e.translateX.value;
+    var ty = e.translateY.value;
+    var tz = e.translateZ.value;
+    var sx = e.scaleX.value;
+    var sy = e.scaleY.value;
+    var sz = e.scaleZ.value;
+    var rx = e.rotateX.value;
+    var ry = e.rotateY.value;
+    var rz = e.rotateZ.value;
+
+    // set to identity if null
+    if (tx == null) tx = 0;
+    if (ty == null) ty = 0;
+    if (tz == null) tz = 0;
+    if (sx == null) sx = 1;
+    if (sy == null) sy = 1;
+    if (sz == null) sz = 1;
+    if (rx == null) rx = 0;
+    if (ry == null) ry = 0;
+    if (rz == null) rz = 0;
+
+    e.rawElement.style.transform =
+        '''
+        translateX(${tx}px) translateY(${ty}px) translateZ(${tz}px)
+        scaleX(${sx}) scaleY(${sy}) scaleZ(${sz})
+        rotateX(${rx}deg) rotateY(${ry}deg) rotateZ(${rz}deg)
+        ''';
+  }
+
+  /**
+   * Helper method that updates shadow settings on a given element
+   * based on the current shadow property values.  Tolerates null values.
+   */
+  static void drawShadow(HtmlPlatformElement e){
+    var sx = e.shadowX.value;
+    var sy = e.shadowY.value;
+    var b = e.shadowBlur.value;
+    var s = e.shadowSize.value;
+    var c = e.shadowColor.value;
+
+    // set nulls
+    sx = (sx == null) ? '' : '${sx}px';
+    sy = (sy == null) ? '' : '${sy}px';
+    b = (b == null) ? '' : '${b}px';
+    s = (s == null) ? '' : '${s}px';
+
+    if (c != null){
+      c = '${c.toColorString()}';
+    }else{
+      c = new Color.predefined(Colors.Black).toColorString();
+    }
+//    if (inset == null) inset = '';
+//    if (inset is bool){
+//      inset = (inset) ? 'inset' : '';
+//    }
+
+    e.rawElement.style.boxShadow = '$sx $sy $b $s $c'.trim();
+  }
+
+  /**
+   * Helper method that sets the transform origin on a given element based on
+   * the current origin value.  Tolerates null values.
+   */
+  static void setTransformOrigin(HtmlPlatformElement e){
+    var tx = e.originX.value;
+    var ty = e.originY.value;
+    var tz = e.originZ.value;
+
+    if (tx == null) tx = 0;
+    if (ty == null) ty = 0;
+    if (tz == null) tz = 0;
+
+    e.rawElement.style.transformOrigin = '${tx}px ${ty}px ${tz}px';
+  }
 }

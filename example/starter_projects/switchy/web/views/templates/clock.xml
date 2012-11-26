@@ -11,8 +11,8 @@
     </lineargradientbrush>
     <styletemplate key='minutehash'>
        <setters>
-          <setter property='transformOriginY' value='95' />
-          <setter property='transformOriginX' value='4' />
+          <setter property='originY' value='95' />
+          <setter property='originX' value='4' />
           <setter property='translateY' value='-85' />
           <setter property='vAlign' value='center' />
           <setter property='hAlign' value='center' />
@@ -32,11 +32,6 @@
 
     <!-- clock face -->
     <border background='WhiteSmoke' halign='stretch' valign='stretch' cornerradius='110' />
-
-    <!-- date inset -->
-    <border bordercolor='#777777' background='{resource date_background}' valign='center' borderthickness='1' padding='2' margin='0,0,0,135'>
-       <textblock fontsize='12' text='{data dayAndMonth}' />
-    </border>
 
     <!-- logo -->
     <stack halign='center' valign='center' margin='90,0,0,0'>
@@ -58,17 +53,22 @@
     <border rotatez='300' style='{resource minutehash}' />
     <border rotatez='330' style='{resource minutehash}' />
 
+    <!-- date inset -->
+    <border bordercolor='#777777' background='{resource date_background}' valign='center' borderthickness='1' padding='2' margin='0,0,0,135'>
+       <textblock fontsize='12' text='{data dayAndMonth}' />
+    </border>
+
     <!-- hour hand -->
-    <border rotatez='{data hourInDegs}' transformoriginy='70' transformoriginx='5' translatey='-35' background='#165284' halign='center' valign='center' width='10' height='70' />
+    <border rotatez='{data hourInDegs}' originy='70' originx='5' translatey='-35' background='#165284' halign='center' valign='center' width='10' height='70' />
 
     <!-- minute hand -->
-    <border rotatez='{data minuteInDegs}' transformoriginy='90' transformoriginx='5' translatey='-45' background='SteelBlue' halign='center' valign='center' width='10' height='90' />
+    <border rotatez='{data minuteInDegs}' originy='90' originx='5' translatey='-45' background='SteelBlue' halign='center' valign='center' width='10' height='90' />
 
     <!-- knob -->
     <border background='SteelBlue' halign='center' valign='center' width='20' height='20' cornerradius='10' />
 
     <!-- second hand -->
-    <border rotatez='{data secondInDegs}' transformoriginy='80' transformoriginx='1' translatey='-40' background='DarkGray' halign='center' valign='center' width='2' height='80' />
+    <border rotatez='{data secondInDegs}' originy='80' originx='1' translatey='-40' background='DarkGray' halign='center' valign='center' width='2' height='80' />
 
     <!-- second hand knob -->
     <border background='DarkGray' halign='center' valign='center' width='7' height='7' cornerradius='7' />

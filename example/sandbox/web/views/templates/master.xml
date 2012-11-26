@@ -30,7 +30,7 @@
 	       <hyperlink valign='center' navigateto='http://www.buckshotui.org/'>
 		       <image width='35' uri='web/resources/buckshot_logo.png' alt='Buckshot Logo' />
 		       </hyperlink>
-	       <textblock margin='0,0,0,5' valign='center' foreground='White' text='Buckshot Sandbox' />
+	       <textblock margin='0,0,0,5' valign='center' foreground='White' text='Buckshot HTML Sandbox' />
 	       <textblock margin='0,0,0,5' valign='center' foreground='White' fontsize='10' text='alpha' />
 	       <image cursor='Help' margin='0,0,0,3' on.click='click_help_handler' width='20' uri='web/resources/help.png' alt='Help Icon' />
 	    </stack>

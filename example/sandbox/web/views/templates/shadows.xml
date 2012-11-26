@@ -39,7 +39,7 @@
             shadowy='{element slRY.value}'
             shadowblur='{element slBlur.value}'
             shadowsize='{element slSize.value}'
-            shadowcolor='{element ddlColors.selectedItem.name}'
+            shadowcolor='{element ddlColors.selectedItem.item}'
             background='Orange'
             width='75'
             height='75'>

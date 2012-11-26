@@ -73,6 +73,41 @@ class ContentPresenter
   /*
    * SurfaceElement Overrides
    */
+  @override void onTranslateXChanged(num value) =>
+      HtmlPlatformElement.doTransform(this);
+  @override void onTranslateYChanged(num value) =>
+      HtmlPlatformElement.doTransform(this);
+  @override void onTranslateZChanged(num value) =>
+      HtmlPlatformElement.doTransform(this);
+  @override void onScaleXChanged(num value) =>
+      HtmlPlatformElement.doTransform(this);
+  @override void onScaleYChanged(num value) =>
+      HtmlPlatformElement.doTransform(this);
+  @override void onScaleZChanged(num value) =>
+      HtmlPlatformElement.doTransform(this);
+  @override void onRotateXChanged(num value) =>
+      HtmlPlatformElement.doTransform(this);
+  @override void onRotateYChanged(num value) =>
+      HtmlPlatformElement.doTransform(this);
+  @override void onRotateZChanged(num value) =>
+      HtmlPlatformElement.doTransform(this);
+  @override void onOriginXChanged(num value) =>
+      HtmlPlatformElement.setTransformOrigin(this);
+  @override void onOriginYChanged(num value) =>
+      HtmlPlatformElement.setTransformOrigin(this);
+  @override void onOriginZChanged(num value) =>
+      HtmlPlatformElement.setTransformOrigin(this);
+  @override void onShadowXChanged(num value) =>
+      HtmlPlatformElement.drawShadow(this);
+  @override void onShadowYChanged(num value) =>
+      HtmlPlatformElement.drawShadow(this);
+  @override void onShadowBlurChanged(num value) =>
+      HtmlPlatformElement.drawShadow(this);
+  @override void onShadowSizeChanged(num value) =>
+      HtmlPlatformElement.drawShadow(this);
+  @override void onShadowColorChanged(Color color) =>
+      HtmlPlatformElement.drawShadow(this);
+
   @override void onHitTestVisibilityChanged(HitTestVisibility value){
     rawElement.style.pointerEvents = '$value';
   }

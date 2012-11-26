@@ -6,7 +6,8 @@ import 'package:buckshot_html/buckshot_html_browser.dart';
 // See LICENSE file for Apache 2.0 licensing information.
 
 /**
-* A basic single line TextBox.  Supports most forms of Html5 textual input type (see [InputTypes]) */
+* A basic single line TextBox.  Supports most forms of Html5 textual input type
+* (see [InputTypes]) */
 class TextBox extends Control
 {
   FrameworkProperty<String> text;
