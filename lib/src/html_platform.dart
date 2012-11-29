@@ -39,6 +39,8 @@ class HtmlPlatform extends BoxModelSurface
     _startEventLoop();
   }
 
+  @override makeMe() => null;
+
   @override String get namespace => 'http://buckshotui.org/surface/html';
 
   /**

@@ -382,8 +382,7 @@ abstract class HtmlPlatformElement implements BoxModelElement
     }else{
       new Logger('buckshot.pal.html.HtmlPlatformElement')
         ..warning('Unrecognized brush "$brush" assignment. Default to White.');
-      rawElement.style.background =
-          new SolidColorBrush.fromPredefined(Colors.White);
+      rawElement.style.background = '${Colors.White}';
     }
   }
 
