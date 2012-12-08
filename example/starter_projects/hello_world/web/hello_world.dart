@@ -1,3 +1,5 @@
+library hello_world_buckshot;
+
 import 'package:buckshot_html/buckshot_html_browser.dart';
 
 void main() {
