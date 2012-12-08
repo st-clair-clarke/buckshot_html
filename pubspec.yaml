@@ -11,6 +11,5 @@ dependencies:
       ref: latest
   xml:
     git: git://github.com/prujohn/dart-xml.git
-  dartnet_event_model:
-    git: git://github.com/prujohn/DartNet-Event-Model.git
+  dartnet_event_model: 0.2.0
   unittest: 0.2.7
