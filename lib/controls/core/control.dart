@@ -65,8 +65,7 @@ abstract class Control
     if (defaultControlTemplate is ControlTemplate){
       // this allows implementers to pull control templates from
       // resources.
-      final tName =
-          XML.parse(defaultControlTemplate.rawData).attributes['controlType'];
+      final tName = _getControlTypeFromTemplate(defaultControlTemplate.rawData);
       assert(tName != null);
       assert(!tName.isEmpty);
       Templates
@@ -74,7 +73,7 @@ abstract class Control
         .then((_) => _finishApplyVisualTemplate(tName));
     } else if (defaultControlTemplate is String &&
         !defaultControlTemplate.isEmpty){
-      final tName = XML.parse(defaultControlTemplate).attributes['controlType'];
+      final tName = _getControlTypeFromTemplate(defaultControlTemplate);
       assert(tName != null);
       assert(!tName.isEmpty);
       Templates
@@ -158,6 +157,18 @@ abstract class Control
           new Binding(prop, k);
         });
     });
+  }
+
+  String _getControlTypeFromTemplate(String template){
+    final xml = XML.parse(template);
+    if (xml.name == 'template'){
+      //has a template wrapper
+      assert(xml.children[0].name.toLowerCase() == 'controltemplate');
+      return xml.children[0].attributes['controlType'];
+    }else{
+      assert(xml.name.toLowerCase() == 'controltemplate');
+      return xml.attributes['controlType'];
+    }
   }
 
   void _getAllTemplateBindings(bindingMap, element){

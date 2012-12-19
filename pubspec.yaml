@@ -9,7 +9,6 @@ dependencies:
     git:
       url: git://github.com/prujohn/Buckshot.git
       ref: latest
-  xml:
-    git: git://github.com/prujohn/dart-xml.git
+  xml: 0.1.6
   dartnet_event_model: 0.2.0
   unittest: 0.2.7
